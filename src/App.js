@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import tileGame from './features/gameSlice';
+import { initGame } from './features/gameSlice';
+import { Provider } from 'react-redux';
+import { configureStore } from '@reduxjs/toolkit';
+import { GameId_3x3, NumImages } from './constants';
+import GameView from './views/GameView';
+
+
+const store = configureStore({
+  reducer: {
+    tileGame
+  }
+});
+
+store.dispatch(initGame({ gameId: GameId_3x3, imageNumber: Math.floor(Math.random() * NumImages) + 1, doShuffling: true }));
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Provider store={store}>
+        <GameView />
+      </Provider>
     </div>
   );
 }
