@@ -8,6 +8,7 @@ import GameHeaderView from "./GameHeaderView"
 import GameStatusView from "./GameStatusView"
 import PuzzleView from "./PuzzleView"
 import RestartButtonView from './RestartButtonView'
+import FullImageView from './FullImageView'
 
 const Game = (props) => {
     return (
@@ -16,6 +17,7 @@ const Game = (props) => {
             <GameStatusView />
             <PuzzleView />
             <RestartButtonView onInitGame={props.onInitGame} />
+            <FullImageView />
         </div>
     )
 }

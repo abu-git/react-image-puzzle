@@ -26,7 +26,7 @@ const getStyleForTile = (id, size, tileWidth, isCorrectPos, imageNumber) => {
     const top = -(Math.floor(idx / size)) * tileWidth
     const left = idx < size ? -idx * tileWidth : -(idx % size) * tileWidth
 
-    console.log(imageNumber)
+    //console.log(imageNumber)
 
     const imPath = `${window.location.href}/images/img${imageNumber}.jpg`
     let style = {

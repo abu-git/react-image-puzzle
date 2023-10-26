@@ -33,7 +33,7 @@ export const gameSlice = createSlice({
             const payload = action.payload
             Object.assign(state, initialState)
             state.imageNumber = payload.imageNumber
-            console.log(state.imageNumber)
+            //console.log(state.imageNumber)
             state.tiles = generateTileSet(gameConfigs[payload.gameId].size, payload.doShuffling)
             state.size = gameConfigs[payload.gameId].size
             state.gameId = payload.gameId
