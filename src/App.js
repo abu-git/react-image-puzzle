@@ -15,12 +15,15 @@ const store = configureStore({
 });
 
 store.dispatch(initGame({ gameId: GameId_3x3, imageNumber: Math.floor(Math.random() * NumImages) + 1, doShuffling: true }));
+//store.dispatch(initGame({ gameId: GameId_3x3, imageNumber: 2, doShuffling: true }));
 
 function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <GameView />
+        <main className='bg-green-100 h-screen'>
+          <GameView />
+        </main>
       </Provider>
     </div>
   );

@@ -7,6 +7,7 @@ import { NumImages } from "../constants"
 import GameHeaderView from "./GameHeaderView"
 import GameStatusView from "./GameStatusView"
 import PuzzleView from "./PuzzleView"
+import RestartButtonView from './RestartButtonView'
 
 const Game = (props) => {
     return (
@@ -14,6 +15,7 @@ const Game = (props) => {
             <GameHeaderView gameName={props.gameName} />
             <GameStatusView />
             <PuzzleView />
+            <RestartButtonView onInitGame={props.onInitGame} />
         </div>
     )
 }
