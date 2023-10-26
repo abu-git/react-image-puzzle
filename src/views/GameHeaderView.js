@@ -7,7 +7,7 @@ const GameHeaderView = (props) => {
                 <h3>Sliding Image Puzzle</h3>
             </header>
             <div>
-                <h2 className='text-2xl font-extrabold'>{props.gameName}</h2>
+                <h2 className='text-xl md:text-2xl font-extrabold'>{props.gameName}</h2>
             </div>
         </div>
     )
