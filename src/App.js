@@ -21,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <Provider store={store}>
-        <main className='bg-green-100 h-screen'>
+        <main className='bg-green-100 h-screen flex-1'>
           <GameView />
         </main>
       </Provider>
